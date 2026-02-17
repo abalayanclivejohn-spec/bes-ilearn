@@ -1,0 +1,271 @@
+/* ===========================
+   GENERAL RESET & BODY
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, #f596ff, hsla(154, 70%, 75%, 0.945));
+    color: #b8a4a4;
+}
+
+/* ===========================
+   NAVBAR - DARK VERSION
+=========================== */
+header.top-nav {
+    background: rgba(48, 48, 119, 0.95); /* Dark navbar */
+    backdrop-filter: blur(10px);        /* Glass effect */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+header .brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+nav.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Button colors */
+nav.nav-links a.teacher {
+    background: #4db6ac; /* Teal-ish darker blue */
+}
+nav.nav-links a.student {
+    background: #7b51c5; /* Purple */
+}
+
+/* Hover effect */
+nav.nav-links a:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+section.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(112, 211, 255, 0.8), rgba(189, 178, 255, 0.8)), url('../img/bgbes.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+section.hero .hero-box {
+    max-width: 800px;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero .tagline {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ===========================
+   VISION & MISSION SECTION
+=========================== */
+section.vm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 20px;
+    gap: 30px;
+    background: rgba(255,255,255,0.1);
+}
+
+.vm-card {
+    flex: 1 1 300px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    color: #193081;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.vm-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.vm-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media(max-width: 768px){
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .vm-card { flex: 1 1 100%; }
+}
+
+/* ===========================
+   BRAND LOGO SIZE FIX
+=========================== */
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 40px;     /* adjust: 30px = smaller, 50px = bigger */
+    height: auto;
+    margin-right: 10px; /* space from text if you add text later */
+    object-fit: contain;
+}
+/* Brand icon modern style */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22cde0, #7b51c5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(123,81,197,0.7);
+}
+
+.icon-wrap i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.brand-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+/* Make dashboard flexible on small screens */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        display: block;
+    }
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .sidebar ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        flex: 1 1 100%;
+    }
+}
+/* Hero tagline with logo */
+.tagline-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between logo and text */
+    margin-bottom: 15px;
+}
+
+.school-logo {
+    width: 50px;   /* adjust as needed */
+    height: 50px;  /* keep square for consistency */
+    object-fit: contain;
+    border-radius: 8px; /* optional, slightly rounded corners */
+}
+.school-logo {
+    width: 50px;       /* adjust size as needed */
+    height: 50px;      /* same as width for a perfect circle */
+    object-fit: cover; /* ensures the image fills the circle without stretching */
+    border-radius: 50%; /* makes it circular */
+    border: 2px solid #8b5cf6; /* optional: a purple border for style */
+}
+/* Hero logo at top of hero box */
+.hero-logo {
+    display: block;
+    margin: 0 auto 15px;  /* centers horizontally, adds spacing below */
+    width: 100px;         /* adjust size */
+    height: 100px;        /* same as width */
+    object-fit: cover;
+    border-radius: 50%;   /* makes it circular */
+    border: 3px solid #8b5cf6; /* optional purple border */
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5); /* subtle glow effect */
+}
+
+/* School name below the logo */
+.school-name {
+    text-align: center;
+    color: #ffffff;   /* purple color to match theme */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.5); /* subtle glow effect */
+}

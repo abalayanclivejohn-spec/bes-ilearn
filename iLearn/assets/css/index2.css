@@ -1,0 +1,219 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* NAVBAR */
+.top-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0ea5e9;
+}
+
+/* NAV BUTTON BASE */
+/* NAV BUTTON BASE (SAME FOR BOTH) */
+.nav-btn {
+    padding: 9px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: #0f172a;          /* dark neutral */
+    color: #ffffff;
+    transition: 
+        background 0.3s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(15,23,42,0.35);
+}
+
+/* SAME HOVER FOR BOTH */
+.nav-btn:hover {
+    background: #020617;          /* darker on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15,23,42,0.55);
+}
+
+
+/* TEACHER LOGIN */
+.nav-btn.teacher {
+    background: #0ea5e9;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(14,165,233,0.35);
+}
+
+.nav-btn.teacher:hover {
+    background: #0284c7;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(14,165,233,0.55);
+}
+
+/* STUDENT LOGIN */
+.nav-btn.student {
+    background: transparent;
+    color: #0ea5e9;
+    border: 2px solid #0ea5e9;
+}
+
+.nav-btn.student:hover {
+    background: #0ea5e9;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(14,165,233,0.45);
+}
+
+
+/* TEACHER */
+.nav-btn.teacher {
+    background: #0ea5e9;
+    color: #fff;
+}
+
+.nav-btn.teacher:hover {
+    background: #0284c7;
+}
+
+/* STUDENT */
+.nav-btn.student {
+    border: 2px solid #0ea5e9;
+    color: #0ea5e9;
+}
+
+.nav-btn.student:hover {
+    background: #0ea5e9;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("../img/bgbes.jpg") center/cover no-repeat;
+    margin-top: 70px;
+}
+
+.overlay {
+    height: 100%;
+    background: rgba(2, 6, 23, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-box {
+    max-width: 800px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.tagline {
+    color: #38bdf8;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-box h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.hero-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* HERO BUTTONS */
+.action-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: #0ea5e9;
+    color: #fff;
+}
+
+.primary:hover {
+    background: #0284c7;
+    transform: translateY(-3px);
+}
+
+.outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.outline:hover {
+    background: #fff;
+    color: #0f172a;
+}
+
+/* VISION & MISSION */
+.vm {
+    background: #020617;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.vm-card {
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    border-radius: 12px;
+    max-width: 420px;
+    color: #fff;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-box h1 {
+        font-size: 2.2rem;
+    }
+
+    .vm {
+        flex-direction: column;
+        align-items: center;
+    }
+}

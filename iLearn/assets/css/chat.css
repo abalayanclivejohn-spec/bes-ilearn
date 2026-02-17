@@ -1,0 +1,123 @@
+/* ===== Chat Container ===== */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat Box */
+.chat-box {
+    height: 450px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    scroll-behavior: smooth;
+}
+
+/* Individual Messages */
+.chat-message {
+    padding: 12px 18px;
+    border-radius: 25px;
+    max-width: 65%;
+    word-wrap: break-word;
+    position: relative;
+    line-height: 1.5;
+    transition: transform 0.2s;
+}
+
+/* Hover lift effect */
+.chat-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Teacher Messages */
+.chat-message.teacher {
+    background: #2563eb;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+/* Student Messages */
+.chat-message.student {
+    background: #16a34a;
+    color: #fff;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+/* Timestamp */
+.chat-message span {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+    text-align: right;
+}
+
+/* Chat Form */
+#chat-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#chat-form input[type=text] {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 25px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#chat-form input[type=text]:focus {
+    border-color: #2563eb;
+}
+
+/* Send Button */
+#chat-form button {
+    padding: 14px 30px;
+    border: none;
+    background: #1f2937;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#chat-form button:hover {
+    background: #111827;
+}
+
+/* Scrollbar Styling */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 3px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+/* Responsive */
+@media(max-width: 600px){
+    .chat-message { max-width: 85%; }
+    #chat-form input[type=text] { padding: 12px 15px; }
+    #chat-form button { padding: 12px 20px; }
+}

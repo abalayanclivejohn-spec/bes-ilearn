@@ -1,0 +1,43 @@
+.zoomable {
+    width: 160px;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform .2s ease;
+}
+
+.zoom-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.zoom-overlay img,
+.zoom-overlay video {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Download button */
+.zoom-download {
+    background: #7b51c5;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.zoom-download:hover {
+    background: #4db6ff;
+}
+.zoomable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0,0,0,.4);
+}

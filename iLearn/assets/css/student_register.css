@@ -1,0 +1,127 @@
+/* =======================================
+   Student Registration CSS
+======================================= */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #42275a, #734b6d);
+}
+
+.register-container {
+    width: 420px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #42275a;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: #42275a;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #999;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #42275a;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    background: #42275a;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2f183f;
+}
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link a {
+    color: #42275a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    background: #ffd6d6;
+    color: #a10000;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success {
+    background: #d6ffe4;
+    color: #006b3c;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Optional: Smooth label animation for better UX */
+.input-group input:focus,
+.input-group input:valid {
+    outline: none;
+    border-bottom-width: 2px;
+}
